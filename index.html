@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,76 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Lato&family=Montserrat:wght@200;300;400;500&family=Rubik:wght@300&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="app.css" />
+    <script src="script.js" defer></script>
   </head>
 
-  <body>
-    <div class="">HI</div>
+  <body class="bg-light">
+    <div class="sticky-top w-100" id="navbar" style="top: 0">
+      <div class="d-flex flex-row align-items-center justify-content-between">
+        <div class="ms-4">Tommy Zhou</div>
+        <ul class="nav nav-pills" id="navigation">
+          <li class="nav-item">
+            <a class="nav-link" href="#intro">ABOUT ME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#item-2">PROJECTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#item-3">EXPERIENCE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#intro">RESUME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#item-2">CONTACT ME</a>
+          </li>
+        </ul>
+        <div class="me-4">
+          <a class="text-dark"><i class="bi bi-envelope"></i></a>
+          <a class="text-dark px-2"><i class="bi bi-github"></i></a>
+          <a class="text-dark"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline"></div>
+    <div class="position-absolute top-50 start-50 translate-middle screen1"></div>
+    <div class="position-absolute top-50 start-50 translate-middle screen2"></div>
+    <div class="container" data-bs-spy="scroll" data-bs-target="#navigation" data-bs-smooth-scroll="true" tabindex="0"
+      id="mainContainer">
+      <div class="d-flex flex-row flex-nowrap justify-content-center align-items-center min-vh-100" id="intro">
+        <div class="animate__animated animate__slideInLeft name flex-shrink-1 me-2">
+          <div class="fs-4">Hi, my name is</div>
+          <div id="name" class="py-1">Tommy Zhou</div>
+          <div class="fs-3">
+            I like <span class="things"></span>
+          </div>
+        </div>
+        <div class="ms-5 me-1">
+          <img src="pfp.jpg" class="img-fluid d-none d-lg-block" alt="Avatar"
+            style="border-radius: 10%; object-fit: cover; height: 29vh;">
+        </div>
+        <div class="d-flex flex-column fs-4 gap-2 ms-5 me-5 ps-4 align-self-center line border-start border-2"
+          id="navigation">
+          <a class="p-1 text-dark" href="#item-3">About Me</a>
+          <a class="p-1 text-dark" href="#intro">Projects</a>
+          <a class="p-1 text-dark" href="#item-2">Experience</a>
+          <a class="p-1 text-dark" href="#item-3">Resume</a>
+          <a class="p-1 text-dark" href="#item-3">Contact Me</a>
+        </div>
+      </div>
+      <div class="row" id="item-2">
+        testing
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>

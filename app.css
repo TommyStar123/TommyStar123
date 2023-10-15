@@ -1,0 +1,96 @@
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.name span::before {
+    /* content: "";
+    height: 30px;
+    width: 2px;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    background: #BD53ED;
+    transform: translateY(-45%); */
+    animation: blink 0.7s infinite;
+}
+
+.name span.stop-blinking::before {
+    animation: none;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0
+    }
+}
+
+.things {
+    color: red
+}
+
+
+.timeline {
+    width: 3px;
+    background-color: black;
+    position: absolute;
+    top: 100vh;
+    bottom: 10%;
+    left: 10%;
+    height: 100%;
+}
+
+.nav-pills {
+    background-color: white;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-pills .nav-link.active {
+    background-color: white;
+    font-weight: 400;
+    color: black;
+}
+
+#name {
+    font-size: 4rem
+}
+
+#navbar {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    background-color: white;
+}
+
+.nav {
+    padding-top: 0.3rem;
+    padding-bottom: 0.45rem;
+}
+
+.nav-item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.screen1 {
+    background-color: #E9F8F9;
+    background-image: -webkit-linear-gradient(137deg, #E9F8F9 45%, #E3F6F5 45%);
+    height: 50vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.line {
+    border-color: #272343 !important;
+}
+
+.text-dark {
+    color: black;
+    text-decoration: none;
+}
+
+#mainContainer {
+    margin-top: -3%;
+}
