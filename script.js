@@ -1,5 +1,5 @@
 const dynamicText = document.querySelector(".name span");
-const words = ["coding", "video games", "anime", "cooking"];
+const words = ["Environment Canada", "Caribou Contests", "the Ontario Chamber of Commerce", "Kumon"];
 
 let wordIndex = 0;
 let charIndex = 0;

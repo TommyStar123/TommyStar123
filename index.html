@@ -12,15 +12,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Lato&family=Montserrat:wght@200;300;400;500&family=Rubik:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Lato&family=Montserrat:wght@200;300;400;500&family=Mukta:wght@300&family=Quicksand&family=Work+Sans:wght@300&&family=Work+Sans:wght@300&family=Rubik:wght@300&display=swap"
       rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="app.css" />
-    <script src="script.js" defer></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+    <link rel="stylesheet" href="slider.css" />
   </head>
 
-  <body class="bg-light">
-    <div class="sticky-top w-100" id="navbar" style="top: 0">
+  <body class="bg-light" style="height: 100%">
+    <div class="timeline"></div>
+    <div class="position-absolute w-100" id="navbar" style="top: 0">
       <div class="d-flex flex-row align-items-center justify-content-between">
         <div class="ms-4">Tommy Zhou</div>
         <ul class="nav nav-pills" id="navigation">
@@ -40,47 +42,324 @@
             <a class="nav-link" href="#item-2">CONTACT ME</a>
           </li>
         </ul>
-        <div class="me-4">
-          <a class="text-dark"><i class="bi bi-envelope"></i></a>
-          <a class="text-dark px-2"><i class="bi bi-github"></i></a>
-          <a class="text-dark"><i class="bi bi-linkedin"></i></a>
+        <div class="me-2">
+          <a class="text-dark me-2"><i class="bi bi-envelope"></i></a>
+          <a class="text-dark me-2"><i class="bi bi-github"></i></a>
+          <a class="text-dark me-2"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
     </div>
 
-    <div class="timeline"></div>
-    <div class="position-absolute top-50 start-50 translate-middle screen1"></div>
-    <div class="position-absolute top-50 start-50 translate-middle screen2"></div>
+    <!-- <div class="position-absolute top-50 start-50 translate-middle screen1 border-top border-1 border-dark">
+    </div>
+    <div
+      class="position-absolute top-50 start-50 translate-middle screen2 border-bottom border-top border-1 border-dark">
+    </div> -->
+    <!-- <div class="position-absolute line_1"></div> -->
+    <div class="position-absolute top-0 start-0 bg-light w-100 min-vh-100 block"></div>
     <div class="container" data-bs-spy="scroll" data-bs-target="#navigation" data-bs-smooth-scroll="true" tabindex="0"
       id="mainContainer">
-      <div class="d-flex flex-row flex-nowrap justify-content-center align-items-center min-vh-100" id="intro">
-        <div class="animate__animated animate__slideInLeft name flex-shrink-1 me-2">
+      <div class="row align-items-center justify-content-center min-vh-100 gap-5" id="intro" syle="width: 100%;">
+        <div class="col-6 animate__animated animate__slideInLeft name">
           <div class="fs-4">Hi, my name is</div>
-          <div id="name" class="py-1">Tommy Zhou</div>
-          <div class="fs-3">
-            I like <span class="things"></span>
+          <div id="name" class="py-2">Tommy Zhou</div>
+          <p class="fs-4">
+            I am a third year student at the University of Waterloo studying computer science who has a passion for
+            learning new technologies and developing products that positively impact others.
+          </p>
+          <div class="fs-4 worked_at">
+            I've worked at <span class="things"></span>
+          </div>
+          <div class="row gap-2 mt-4">
+            <button type="button" class="col-3 btn btn-outline-primary">More About Me</button>
+            <button type="button" class="col-3 btn btn-primary">View My Resume</button>
           </div>
         </div>
-        <div class="ms-5 me-1">
-          <img src="pfp.jpg" class="img-fluid d-none d-lg-block" alt="Avatar"
-            style="border-radius: 10%; object-fit: cover; height: 29vh;">
+        <div id="pfp" class="col-4">
+          <img src="pfp.jpg" class="d-none d-lg-block" alt="Avatar"
+            style="border-radius: 10%; object-fit: cover; height: 26rem;">
         </div>
-        <div class="d-flex flex-column fs-4 gap-2 ms-5 me-5 ps-4 align-self-center line border-start border-2"
+        <!-- <div
+          class="d-flex flex-column fs-4 gap-2 ms-5 me-5 ps-4 align-self-center line border-start border-1 flex-shrink-0"
           id="navigation">
           <a class="p-1 text-dark" href="#item-3">About Me</a>
           <a class="p-1 text-dark" href="#intro">Projects</a>
           <a class="p-1 text-dark" href="#item-2">Experience</a>
           <a class="p-1 text-dark" href="#item-3">Resume</a>
           <a class="p-1 text-dark" href="#item-3">Contact Me</a>
-        </div>
+        </div> -->
+      </div>
+      <div class="row" id="item-3">
+        <h2>Resume</h2>
+        <hr>
+        <object data="C:\Users\tommy\OneDrive\Documents\TommyWebsite\TommyStar123.github.io\Tommy_Zhou_Resume.pdf"
+          type="application/pdf" width="100%" height="1000px">
+          <p>Unable to display PDF file. <a
+              href="C:\Users\tommy\OneDrive\Documents\TommyWebsite\TommyStar123.github.io\Tommy_Zhou_Resume.pdf">Download</a>
+            instead.
+          </p>
+        </object>
       </div>
       <div class="row" id="item-2">
-        testing
+        <main>
+          <div class="swiper">
+            <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-slide-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1543335785-8aadf6d8183c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"
+                    alt="">
+                  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                      d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                      opacity=".25" class="shape-fill"></path>
+                    <path
+                      d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                      opacity=".5" class="shape-fill"></path>
+                    <path
+                      d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                      class="shape-fill"></path>
+                  </svg>
+                </div>
+                <div class="swiper-slide-content">
+                  <div>
+                    <h2>CampFinder</h2>
+                    <p><i>Javascript, HTML/CSS, Bootstrap, Express, Node.js, & MongoDB</i></p>
+                    <p>A full stack web application aimed to help users discover, post, and review campgrounds in their
+                      area
+                    </p>
+                    <a class="show-more" href="https://en.wikipedia.org/wiki/Louvre" target="_blank"><svg fill="none"
+                        stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3">
+                        </path>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1618822461310-da1be362e30c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                    alt="">
+                  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                      d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                      opacity=".25" class="shape-fill"></path>
+                    <path
+                      d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                      opacity=".5" class="shape-fill"></path>
+                    <path
+                      d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                      class="shape-fill"></path>
+                  </svg>
+                </div>
+                <div class="swiper-slide-content">
+                  <div>
+                    <h2>Chess</h2>
+                    <p><i>C++, xWindows</i></p>
+                    <p>This project is a full recreation of chess using C++, displayed using xWindows graphics. All
+                      features, including En
+                      Passant, pawn promotion, and castling are implemented. Bonus features include computer bots of 3
+                      difficulties and a
+                      visual display of the chess board.</p>
+                    <a class="show-more" href="https://en.wikipedia.org/wiki/Seychelles" target="_blank"><svg
+                        fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3">
+                        </path>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1965&q=80"
+                    alt="">
+                  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                      d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                      opacity=".25" class="shape-fill"></path>
+                    <path
+                      d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                      opacity=".5" class="shape-fill"></path>
+                    <path
+                      d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                      class="shape-fill"></path>
+                  </svg>
+                </div>
+                <div class="swiper-slide-content">
+                  <div>
+                    <h2>Timely</h2>
+                    <p><i>HTML/CSS, Javascript, React</i></p>
+                    <p>Chrome extension that allows the user to select websites to track, and subsequently tracks and
+                      stores
+                      the time the users
+                      spends on those websites</p>
+                    <a class="show-more" href="https://en.wikipedia.org/wiki/London" target="_blank"><svg fill="none"
+                        stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3">
+                        </path>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80"
+                    alt="">
+                  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                      d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                      opacity=".25" class="shape-fill"></path>
+                    <path
+                      d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                      opacity=".5" class="shape-fill"></path>
+                    <path
+                      d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                      class="shape-fill"></path>
+                  </svg>
+                </div>
+                <div class="swiper-slide-content">
+                  <div>
+                    <h2>This Website</h2>
+                    <p><i>HTML/CSS, Javascript</i></p>
+                    <p>I created this website to help present myself to those who are interested in me.</p>
+                    <a class="show-more" href="https://en.wikipedia.org/wiki/Maldives" target="_blank"><svg fill="none"
+                        stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3">
+                        </path>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="swiper-slide">
+                    <div class="swiper-slide-img">
+                      <img
+                        src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1886&q=80"
+                        alt="">
+                      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                        preserveAspectRatio="none">
+                        <path
+                          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                          opacity=".25" class="shape-fill"></path>
+                        <path
+                          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                          opacity=".5" class="shape-fill"></path>
+                        <path
+                          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                          class="shape-fill"></path>
+                      </svg>
+                    </div>
+                    <div class="swiper-slide-content">
+                      <div>
+                        <h2>Italy</h2>
+                        <p>Located in the middle of the Mediterranean Sea, it consists of a peninsula delimited by the Alps and
+                          surrounded by several islands. Italy shares land borders with France, Switzerland, Austria, Slovenia
+                          and the enclaved microstates of Vatican City and San Marino.</p>
+                        <a class="show-more" href="https://en.wikipedia.org/wiki/Italy" target="_blank"><svg fill="none"
+                            stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3">
+                            </path>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div> -->
+            </div>
+          </div>
+        </main>
       </div>
+      <div class="row">
+        <h2>Experience</h2>
+        <hr>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                  content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="row">
+        <h2>Contact Me</h2>
+        <hr>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </div>
+      <br>
+      <br>
     </div>
+    <nav class="navbar navbar-expand-lg" style="background-color: white;">
+      <div class="container-md pt-2 pb-3">
+        <a class="navbar-brand" href="#">Tommy Zhou | <i class="bi bi-github"></i> <i class="bi bi-linkedin"></i> <i
+            class="bi bi-instagram"></i></a>
+      </div>
+    </nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+    <script src="script.js" defer></script>
+    <script src="./sliderScript.js"></script>
   </body>
 
 </html>
